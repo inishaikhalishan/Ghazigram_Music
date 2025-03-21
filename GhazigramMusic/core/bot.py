@@ -1,0 +1,11 @@
+from telethon import TelegramClient
+from os import environ
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+api_id = int(environ["API_ID"])
+api_hash = environ["API_HASH"]
+bot_token = environ["BOT_TOKEN"]
+bot = TelegramClient("bot", api_id, api_hash).start(bot_token=bot_token)
